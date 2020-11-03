@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    
-    $(".next").click(nextImg);
-    $(".prev").click(prevImg);
-    $(document).keydown(keyBoard);
+
+  $(".next").click(nextImg);
+  $(".prev").click(prevImg);
+  $(document).keydown(keyBoard);
 
   // funzione per l'avanti
   function nextImg() {
@@ -22,39 +22,39 @@ $(document).ready(function () {
   }
 
   //   funzione next
-  function controlNext(element) {
-    var attiva = $(element + ".active");
+  function controlNext() {
+    var attiva = $("img.active");
 
     attiva.removeClass("active");
 
-    // quando arrivo all'ultimo elemento allora
-    if (attiva.hasClass("last")){
-      //torna al primo
-      $(element + ".first").addClass("active");
+    // quando arrivo all'ultimo img allora
+    if (attiva.hasClass("last")) {
+      //torna al primo img
+      $("img.first").addClass("active");
     } else {// altrimenti
       //attiva quello successivo
-      attiva.next(element).addClass("active");
+      attiva.next("img").addClass("active");
     }
   }
 
-    //   funzione prev
-  function controlPrev(element) {
-    var attiva = $(element + ".active");
+  //   funzione prev
+  function controlPrev() {
+    var attiva = $("img.active");
     console.log(attiva);
 
     attiva.removeClass("active");
 
-    // quando arriva al primo elemento allora
-    if (attiva.hasClass("first")){
-      //torna all'ultimo
-      $(element + ".last").addClass("active");
+    // quando arriva al primo img allora
+    if (attiva.hasClass("first")) {
+      //torna all'ultimo img
+      $("img.last").addClass("active");
     } else {// altrimenti
       //attiva quello successivo
-      attiva.prev(element).addClass("active");
-    }   
+      attiva.prev("img").addClass("active");
+    }
   }
 
 });
 
- 
+
 
