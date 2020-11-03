@@ -11,6 +11,8 @@ $(document).ready(function () {
     // arrow right
     controlNext("img");
 
+    // circle right
+    controlNext(".nav > i");  
   }
 
   // funzione per precedenti
@@ -19,7 +21,36 @@ $(document).ready(function () {
     // arrow left
     controlPrev("img");
 
+    // circle left
+    controlPrev(".nav > i");
+
   }
+
+//   TASTIERA
+  function keyBoard(e) {
+    
+    // alla pressione del tasto destro
+    if (e.keyCode === 39) {
+        console.log(e.keyCode);
+
+        // arrow right
+        controlNext("img");
+
+        // circle right
+        controlNext(".nav > i"); 
+
+
+      // alla pressione del tasto sinistro  
+    } else if (e.keyCode === 37) {
+        console.log(e.keyCode);
+        
+        // arrow left
+        controlPrev("img");
+
+        // circle left
+        controlPrev(".nav > i");
+    }    
+  };
 
   //   funzione next
   function controlNext(element) {
