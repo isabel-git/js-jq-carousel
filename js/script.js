@@ -7,22 +7,6 @@ $(document).ready(function () {
   // funzione per l'avanti
   function nextImg() {
 
-
-    // arrow right
-    controlNext("img");
-
-  }
-
-  // funzione per precedenti
-  function prevImg() {
-
-    // arrow left
-    controlPrev("img");
-
-  }
-
-  //   funzione next
-  function controlNext() {
     var attiva = $("img.active");
 
     attiva.removeClass("active");
@@ -35,10 +19,12 @@ $(document).ready(function () {
       //attiva quello successivo
       attiva.next("img").addClass("active");
     }
+
   }
 
-  //   funzione prev
-  function controlPrev() {
+  // funzione per precedenti
+  function prevImg() {
+
     var attiva = $("img.active");
     console.log(attiva);
 
@@ -52,9 +38,11 @@ $(document).ready(function () {
       //attiva quello successivo
       attiva.prev("img").addClass("active");
     }
+
   }
 
 });
+
 
 
 
